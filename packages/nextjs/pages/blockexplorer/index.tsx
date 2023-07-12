@@ -4,6 +4,7 @@ import { hardhat } from "wagmi/chains";
 import { PaginationButton } from "~~/components/blockexplorer/PaginationButton";
 import { SearchBar } from "~~/components/blockexplorer/SearchBar";
 import { TransactionsTable } from "~~/components/blockexplorer/TransactionsTable";
+import WorldCoinTest from "~~/components/worldcointest";
 import { useFetchBlocks } from "~~/hooks/scaffold-eth";
 import { getTargetNetwork, notification } from "~~/utils/scaffold-eth";
 
@@ -53,6 +54,7 @@ const Blockexplorer: NextPage = () => {
       <SearchBar />
       <TransactionsTable blocks={blocks} transactionReceipts={transactionReceipts} isLoading={isLoading} />
       <PaginationButton currentPage={currentPage} totalItems={Number(totalBlocks)} setCurrentPage={setCurrentPage} />
+      <WorldCoinTest />
     </div>
   );
 };
